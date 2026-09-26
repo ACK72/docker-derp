@@ -1,0 +1,25 @@
+version: 2
+updates:
+  - package-ecosystem: github-actions
+    directory: /
+    schedule:
+      interval: daily
+    groups:
+      actions:
+        patterns: ["*"]
+  - package-ecosystem: docker
+    directory: /
+    schedule:
+      interval: daily
+  - package-ecosystem: gomod
+    directory: /
+    schedule:
+      interval: daily
+    allow:
+      - dependency-type: all
+    # Follow Tailscale's pinned fork; its inherited tags use a different module path.
+    ignore:
+      - dependency-name: github.com/tailscale/wireguard-go
+    groups:
+      go-dependencies:
+        patterns: ["*"]

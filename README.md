@@ -4,7 +4,7 @@ Tailscale `derper` and `derpprobe` for Docker (`amd64` / `arm64`).
 
 - [Custom DERP servers](https://tailscale.com/docs/reference/derp-servers/custom-derp-servers)
 - [All server options](https://github.com/tailscale/tailscale/blob/main/cmd/derper/derper.go)
-- Image: `ghcr.io/ack72/docker-derp` — `latest`, `1.102.4`, or `1.102.4-<run-id>.<attempt>` (unique build).
+- Image: `ghcr.io/ack72/docker-derp` — `latest`, `1.104.5`, or `1.104.5-<run-id>.<attempt>` (unique build).
 
 ```sh
 # Automatic Let's Encrypt certificate
@@ -87,7 +87,7 @@ builds publish images after both architectures pass security and runtime checks.
 
 ## NGINX
 
-[Tailscale advises against HTTP proxies](https://github.com/tailscale/tailscale/blob/v1.102.4/cmd/derper/README.md#guide-to-running-cmdderper).
+[Tailscale advises against HTTP proxies](https://github.com/tailscale/tailscale/blob/v1.104.5/cmd/derper/README.md#guide-to-running-cmdderper).
 The examples below are optional, locally tested configurations; direct exposure
 remains the upstream recommendation. Both assume NGINX runs on the Docker host.
 
